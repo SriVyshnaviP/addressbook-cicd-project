@@ -31,7 +31,7 @@ pipeline{
         }
         stage("deploy the project on tomcat"){
             steps{
-                sh "sudo mv /var/lib/jenkins/workspace/ci-cd-webhook/target/addressbook.war /home/ubuntu/apache-tomcat-9.0.111/webapps"
+                sh "sudo cp /var/lib/jenkins/workspace/pipeline-job/target/addressbook.war /root/apache-tomcat-9.0.111/webapps"
             }
         }
     }
